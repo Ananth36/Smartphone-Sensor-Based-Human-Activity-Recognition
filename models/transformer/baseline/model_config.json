@@ -1,0 +1,112 @@
+{
+  "model": "HARTransformer",
+  "hyperparameters": {
+    "d_model": 64,
+    "n_heads": 4,
+    "n_layers": 2,
+    "d_ff": 128,
+    "dropout": 0.1,
+    "pooling": "cls",
+    "positional": "learned",
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "optimizer": "AdamW",
+    "epochs": 150,
+    "early_stopping_patience": 20,
+    "grad_clip": 1.0,
+    "augmentation": false,
+    "class_weights": false,
+    "lr_schedule": null
+  },
+  "input": {
+    "shape": [
+      "N",
+      128,
+      9
+    ],
+    "units": "raw UCI HAR inertial signals",
+    "channel_order": [
+      "body_acc_x",
+      "body_acc_y",
+      "body_acc_z",
+      "body_gyro_x",
+      "body_gyro_y",
+      "body_gyro_z",
+      "total_acc_x",
+      "total_acc_y",
+      "total_acc_z"
+    ]
+  },
+  "output": {
+    "type": "probabilities",
+    "classes": [
+      "WALKING",
+      "WALKING_UPSTAIRS",
+      "WALKING_DOWNSTAIRS",
+      "SITTING",
+      "STANDING",
+      "LAYING"
+    ]
+  },
+  "normalization": {
+    "signals": [
+      "body_acc_x",
+      "body_acc_y",
+      "body_acc_z",
+      "body_gyro_x",
+      "body_gyro_y",
+      "body_gyro_z",
+      "total_acc_x",
+      "total_acc_y",
+      "total_acc_z"
+    ],
+    "mean": [
+      -0.0006464802928407528,
+      -0.00027068060388344247,
+      -0.0002035874464049342,
+      -0.0005272192613028079,
+      -0.0005117109019258433,
+      7.623773294296517e-05,
+      0.799737632918269,
+      0.02612569558398927,
+      0.09191112250132683
+    ],
+    "std": [
+      0.1923386539069818,
+      0.12253008135615763,
+      0.10963093240940903,
+      0.4035057778057158,
+      0.3890153929658963,
+      0.26241690207413815,
+      0.4169412607442241,
+      0.3823020397643594,
+      0.37210077218678533
+    ],
+    "clip_lo": [
+      -0.81003035049,
+      -0.9543909,
+      -0.8968961,
+      -3.172119,
+      -2.965149,
+      -2.038653,
+      -0.39972402453,
+      -1.191697896,
+      -1.286855
+    ],
+    "clip_hi": [
+      1.0861006026999043,
+      0.6589083,
+      0.6609039847696889,
+      2.4162127812997247,
+      3.606551,
+      1.6143036781998297,
+      2.056605,
+      1.024946265599942,
+      1.003188639299973
+    ],
+    "how_to_apply": "x = clip(raw, clip_lo, clip_hi); x = (x - mean) / std   # per channel, raw shape (N,128,9)"
+  },
+  "dataset_version": "uci-har-65a1fc6120e8",
+  "best_epoch": 46
+}
