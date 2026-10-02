@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0",
+  "run_id": "transformer__baseline__20261002-054215",
+  "timestamp": "20261002-054215",
+  "model_name": "transformer",
+  "family": "Transformer",
+  "owner": "K V Ananth Karantha",
+  "input_representation": "raw_9ch_128",
+  "run_tag": "baseline",
+  "dataset_version": "uci-har-65a1fc6120e8",
+  "framework": "PyTorch 2.11.0+cu130",
+  "seed": 42,
+  "hardware": {
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "python": "3.13.15",
+    "cpu": "x86_64",
+    "torch": "2.11.0+cu130",
+    "gpu": "Tesla T4",
+    "tensorflow": "2.20.0"
+  },
+  "test": {
+    "accuracy": 0.9284017645062775,
+    "macro_f1": 0.9268089362529867,
+    "macro_precision": 0.9303623682113469,
+    "macro_recall": 0.9282114770381562,
+    "weighted_f1": 0.9282007050802533,
+    "balanced_accuracy": 0.9282114770381562,
+    "cohen_kappa": 0.9140057298443128,
+    "mcc": 0.9149348988094465,
+    "log_loss": 0.4207741316224023,
+    "roc_auc_macro_ovr": 0.9951284810963136,
+    "top2_accuracy": 0.9769256871394638,
+    "sit_stand_confusion_rate": 0.08602150537634409,
+    "walking_variants_confusion_rate": 0.0821917808219178,
+    "static_dynamic_confusion_rate": 0.0010179843909060061,
+    "subject_acc_mean": 0.9220810817563581,
+    "subject_acc_std": 0.09229426854312996,
+    "subject_acc_min": 0.7210884353741497,
+    "worst_subject": 10,
+    "per_subject_accuracy": {
+      "2": 0.9437086092715232,
+      "4": 0.9621451104100947,
+      "9": 0.8020833333333334,
+      "10": 0.7210884353741497,
+      "12": 0.903125,
+      "13": 0.9969418960244648,
+      "18": 0.989010989010989,
+      "20": 0.9858757062146892,
+      "24": 0.994750656167979
+    }
+  },
+  "test_per_class": {
+    "WALKING": {
+      "precision": 0.9640449438202248,
+      "recall": 0.8649193548387096,
+      "f1": 0.9117959617428267,
+      "support": 496
+    },
+    "WALKING_UPSTAIRS": {
+      "precision": 0.9533333333333334,
+      "recall": 0.910828025477707,
+      "f1": 0.9315960912052117,
+      "support": 471
+    },
+    "WALKING_DOWNSTAIRS": {
+      "precision": 0.8383838383838383,
+      "recall": 0.9880952380952381,
+      "f1": 0.907103825136612,
+      "support": 420
+    },
+    "SITTING": {
+      "precision": 0.9560185185185185,
+      "recall": 0.8411405295315683,
+      "f1": 0.894907908992416,
+      "support": 491
+    },
+    "STANDING": {
+      "precision": 0.8814432989690721,
+      "recall": 0.9642857142857143,
+      "f1": 0.9210053859964094,
+      "support": 532
+    },
+    "LAYING": {
+      "precision": 0.988950276243094,
+      "recall": 1.0,
+      "f1": 0.9944444444444445,
+      "support": 537
+    }
+  },
+  "confusion_matrix": [
+    [
+      429,
+      16,
+      51,
+      0,
+      0,
+      0
+    ],
+    [
+      13,
+      429,
+      29,
+      0,
+      0,
+      0
+    ],
+    [
+      3,
+      2,
+      415,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      413,
+      69,
+      6
+    ],
+    [
+      0,
+      0,
+      0,
+      19,
+      513,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      537
+    ]
+  ],
+  "classes": [
+    "WALKING",
+    "WALKING_UPSTAIRS",
+    "WALKING_DOWNSTAIRS",
+    "SITTING",
+    "STANDING",
+    "LAYING"
+  ],
+  "val": {
+    "accuracy": 0.9680696661828737,
+    "macro_f1": 0.9691437714427908,
+    "macro_precision": 0.9692061083777465,
+    "macro_recall": 0.9692385135056812,
+    "weighted_f1": 0.9680940268111323,
+    "balanced_accuracy": 0.9692385135056812,
+    "cohen_kappa": 0.9615908941177663,
+    "mcc": 0.9616146514718393,
+    "log_loss": 0.15447560244590436,
+    "roc_auc_macro_ovr": 0.9975410166773647,
+    "top2_accuracy": 1.0,
+    "sit_stand_confusion_rate": 0.07520325203252033,
+    "walking_variants_confusion_rate": 0.009569377990430622,
+    "static_dynamic_confusion_rate": 0.000725689404934688
+  },
+  "train": {
+    "accuracy": 0.9971543354536324,
+    "macro_f1": 0.9973847766554845,
+    "macro_precision": 0.9973632948852859,
+    "macro_recall": 0.9974131653913466,
+    "weighted_f1": 0.9971545517124175,
+    "balanced_accuracy": 0.9974131653913466,
+    "cohen_kappa": 0.9965740090355376,
+    "mcc": 0.9965756564295408,
+    "log_loss": 0.007239054580132247,
+    "roc_auc_macro_ovr": 0.9999842375510689,
+    "top2_accuracy": 1.0,
+    "sit_stand_confusion_rate": 0.007841328413284132,
+    "walking_variants_confusion_rate": 0.0,
+    "static_dynamic_confusion_rate": 0.0
+  },
+  "efficiency": {
+    "params_total": 76422,
+    "params_trainable": 76422,
+    "model_size_mb": 0.303,
+    "flops_per_window": 17056512,
+    "flops_tool": "torch.utils.flop_counter (2 x MACs)",
+    "latency_ms_cpu_b1": 3.006,
+    "latency_ms_cpu_b1_p95": 4.186,
+    "cpu_threads": 1,
+    "latency_ms_gpu_b1": 2.523,
+    "throughput_gpu_wps": 25413.9,
+    "peak_gpu_mem_mb": 119.5
+  },
+  "training": {
+    "train_time_s": 76.9,
+    "epochs_trained": 66,
+    "best_epoch": 46,
+    "time_per_epoch_s": 1.164,
+    "best_val_macro_f1": 0.9691437714427908,
+    "early_stopping": "patience 20 on val macro-F1",
+    "peak_gpu_mem_mb": 119.5
+  },
+  "hyperparameters": {
+    "d_model": 64,
+    "n_heads": 4,
+    "n_layers": 2,
+    "d_ff": 128,
+    "dropout": 0.1,
+    "pooling": "cls",
+    "positional": "learned",
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "optimizer": "AdamW",
+    "epochs": 150,
+    "early_stopping_patience": 20,
+    "grad_clip": 1.0,
+    "augmentation": false,
+    "class_weights": false,
+    "lr_schedule": null
+  },
+  "artifacts": {
+    "state_dict": "/content/drive/MyDrive/DL Proj/models/transformer/baseline/transformer_state_dict.pt",
+    "config": "/content/drive/MyDrive/DL Proj/models/transformer/baseline/model_config.json",
+    "torchscript": "/content/drive/MyDrive/DL Proj/models/transformer/baseline/transformer_deploy.torchscript.pt",
+    "onnx": "/content/drive/MyDrive/DL Proj/models/transformer/baseline/transformer_deploy.onnx",
+    "predict_script": "/content/drive/MyDrive/DL Proj/models/transformer/baseline/predict.py"
+  },
+  "notes": "Unoptimized baseline: no augmentation, no class weights, constant LR; FLOPs via torch flop_counter."
+}
