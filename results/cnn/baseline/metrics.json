@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0",
+  "run_id": "cnn__baseline__20261002-110759",
+  "timestamp": "20261002-110759",
+  "model_name": "cnn",
+  "family": "CNN",
+  "owner": "Akshaj Vinod Chandak",
+  "input_representation": "raw_9ch_128",
+  "run_tag": "baseline",
+  "dataset_version": "uci-har-65a1fc6120e8",
+  "framework": "PyTorch 2.11.0+cu130",
+  "seed": 42,
+  "hardware": {
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "python": "3.13.15",
+    "cpu": "x86_64",
+    "torch": "2.11.0+cu130",
+    "gpu": "Tesla T4",
+    "tensorflow": "2.20.0"
+  },
+  "test": {
+    "accuracy": 0.9395995928062436,
+    "macro_f1": 0.9406106820753698,
+    "macro_precision": 0.9404593951214157,
+    "macro_recall": 0.9413019773826053,
+    "weighted_f1": 0.9392564831767785,
+    "balanced_accuracy": 0.9413019773826053,
+    "cohen_kappa": 0.9274399584142874,
+    "mcc": 0.9275601804211759,
+    "log_loss": 0.23656540699215092,
+    "roc_auc_macro_ovr": 0.9929140676510463,
+    "top2_accuracy": 0.992195453003054,
+    "sit_stand_confusion_rate": 0.12903225806451613,
+    "walking_variants_confusion_rate": 0.014419610670511895,
+    "static_dynamic_confusion_rate": 0.008822531387852052,
+    "subject_acc_mean": 0.9340892130282725,
+    "subject_acc_std": 0.08000830309609577,
+    "subject_acc_min": 0.7847222222222222,
+    "worst_subject": 9,
+    "per_subject_accuracy": {
+      "2": 0.8973509933774835,
+      "4": 0.9495268138801262,
+      "9": 0.7847222222222222,
+      "10": 0.8095238095238095,
+      "12": 1.0,
+      "13": 1.0,
+      "18": 1.0,
+      "20": 0.9971751412429378,
+      "24": 0.968503937007874
+    }
+  },
+  "test_per_class": {
+    "WALKING": {
+      "precision": 0.9631067961165048,
+      "recall": 1.0,
+      "f1": 0.9812067260138477,
+      "support": 496
+    },
+    "WALKING_UPSTAIRS": {
+      "precision": 0.9478079331941545,
+      "recall": 0.9639065817409767,
+      "f1": 0.9557894736842105,
+      "support": 471
+    },
+    "WALKING_DOWNSTAIRS": {
+      "precision": 0.9976019184652278,
+      "recall": 0.9904761904761905,
+      "f1": 0.994026284348865,
+      "support": 420
+    },
+    "SITTING": {
+      "precision": 0.831013916500994,
+      "recall": 0.8513238289205702,
+      "f1": 0.8410462776659959,
+      "support": 491
+    },
+    "STANDING": {
+      "precision": 0.9032258064516129,
+      "recall": 0.8421052631578947,
+      "f1": 0.8715953307392996,
+      "support": 532
+    },
+    "LAYING": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 537
+    }
+  },
+  "confusion_matrix": [
+    [
+      496,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      15,
+      454,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      4,
+      0,
+      416,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      25,
+      0,
+      418,
+      48,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      84,
+      448,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      537
+    ]
+  ],
+  "classes": [
+    "WALKING",
+    "WALKING_UPSTAIRS",
+    "WALKING_DOWNSTAIRS",
+    "SITTING",
+    "STANDING",
+    "LAYING"
+  ],
+  "val": {
+    "accuracy": 0.9775036284470247,
+    "macro_f1": 0.9789972032074296,
+    "macro_precision": 0.9802798982188294,
+    "macro_recall": 0.9802043422733079,
+    "weighted_f1": 0.9775007474304376,
+    "balanced_accuracy": 0.9802043422733079,
+    "cohen_kappa": 0.9729543900524223,
+    "mcc": 0.9735467234137486,
+    "log_loss": 0.0799194892677061,
+    "roc_auc_macro_ovr": 0.9972516748448029,
+    "top2_accuracy": 1.0,
+    "sit_stand_confusion_rate": 0.06300813008130081,
+    "walking_variants_confusion_rate": 0.0,
+    "static_dynamic_confusion_rate": 0.0
+  },
+  "train": {
+    "accuracy": 0.9651824573150318,
+    "macro_f1": 0.9680169583655331,
+    "macro_precision": 0.9684974125666401,
+    "macro_recall": 0.9683178407134413,
+    "weighted_f1": 0.9651709004212867,
+    "balanced_accuracy": 0.9683178407134413,
+    "cohen_kappa": 0.9580878152608556,
+    "mcc": 0.9582844672442301,
+    "log_loss": 0.07070274450738713,
+    "roc_auc_macro_ovr": 0.9983644661302846,
+    "top2_accuracy": 1.0,
+    "sit_stand_confusion_rate": 0.0959409594095941,
+    "walking_variants_confusion_rate": 0.0,
+    "static_dynamic_confusion_rate": 0.0
+  },
+  "efficiency": {
+    "params_total": 197190,
+    "params_trainable": 197190,
+    "model_size_mb": 0.766,
+    "flops_per_window": 24856064,
+    "flops_tool": "torch.utils.flop_counter (2 x MACs)",
+    "latency_ms_cpu_b1": 1.264,
+    "latency_ms_cpu_b1_p95": 1.52,
+    "cpu_threads": 1,
+    "latency_ms_gpu_b1": 1.053,
+    "throughput_gpu_wps": 61135.5,
+    "peak_gpu_mem_mb": 57.1
+  },
+  "training": {
+    "train_time_s": 39.64,
+    "epochs_trained": 45,
+    "best_epoch": 25,
+    "time_per_epoch_s": 0.88,
+    "best_val_macro_f1": 0.9789972032074296,
+    "early_stopping": "patience 20 on val macro-F1",
+    "peak_gpu_mem_mb": 57.1
+  },
+  "hyperparameters": {
+    "channels": [
+      64,
+      64,
+      128,
+      128,
+      128
+    ],
+    "kernel_sizes": [
+      5,
+      5,
+      5,
+      5,
+      3
+    ],
+    "pool_after": [
+      1,
+      3
+    ],
+    "dropout": 0.5,
+    "batchnorm": true,
+    "pooling": "global_avg",
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "optimizer": "AdamW",
+    "epochs": 150,
+    "early_stopping_patience": 20,
+    "grad_clip": 1.0,
+    "augmentation": false,
+    "class_weights": false,
+    "lr_schedule": null
+  },
+  "artifacts": {
+    "state_dict": "/content/drive/MyDrive/HAR/models/cnn/baseline/cnn_state_dict.pt",
+    "config": "/content/drive/MyDrive/HAR/models/cnn/baseline/model_config.json",
+    "torchscript": "/content/drive/MyDrive/HAR/models/cnn/baseline/cnn_deploy.torchscript.pt",
+    "onnx": "/content/drive/MyDrive/HAR/models/cnn/baseline/cnn_deploy.onnx",
+    "predict_script": "/content/drive/MyDrive/HAR/models/cnn/baseline/predict.py"
+  },
+  "notes": "Unoptimized baseline, parallel to the Transformer run: 150 epochs max, patience 20, no augmentation, no class weights, constant LR; FLOPs via torch flop_counter."
+}
