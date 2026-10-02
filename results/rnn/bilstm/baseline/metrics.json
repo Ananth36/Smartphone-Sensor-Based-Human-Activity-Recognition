@@ -1,0 +1,224 @@
+{
+  "schema_version": "1.0",
+  "run_id": "bilstm__baseline__20261002-211900",
+  "timestamp": "20261002-211900",
+  "model_name": "bilstm",
+  "family": "RNN",
+  "owner": "Nandan Reddy Maram",
+  "input_representation": "raw_9ch_128",
+  "run_tag": "baseline",
+  "dataset_version": "uci-har-65a1fc6120e8",
+  "framework": "PyTorch 2.8.0+cpu",
+  "seed": 42,
+  "hardware": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.6",
+    "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "torch": "2.8.0+cpu",
+    "tensorflow": "2.19.0"
+  },
+  "test": {
+    "accuracy": 0.9141499830335935,
+    "macro_f1": 0.9153051352212503,
+    "macro_precision": 0.9157215308531494,
+    "macro_recall": 0.9170652148820752,
+    "weighted_f1": 0.9144047340467766,
+    "balanced_accuracy": 0.9170652148820752,
+    "cohen_kappa": 0.8969319038729107,
+    "mcc": 0.8973388305153329,
+    "log_loss": 0.22244879014593155,
+    "roc_auc_macro_ovr": 0.992276991180531,
+    "top2_accuracy": 0.995928062436376,
+    "sit_stand_confusion_rate": 0.17302052785923755,
+    "walking_variants_confusion_rate": 0.04253785147801009,
+    "static_dynamic_confusion_rate": 0.00508992195453003,
+    "subject_acc_mean": 0.9057578004416413,
+    "subject_acc_std": 0.11916973064272934,
+    "subject_acc_min": 0.6394557823129252,
+    "worst_subject": 10,
+    "per_subject_accuracy": {
+      "2": 0.8940397350993378,
+      "4": 0.8706624605678234,
+      "9": 0.7777777777777778,
+      "10": 0.6394557823129252,
+      "12": 0.98125,
+      "13": 0.9938837920489296,
+      "18": 1.0,
+      "20": 1.0,
+      "24": 0.994750656167979
+    }
+  },
+  "test_per_class": {
+    "WALKING": {
+      "precision": 1.0,
+      "recall": 0.9334677419354839,
+      "f1": 0.9655891553701773,
+      "support": 496
+    },
+    "WALKING_UPSTAIRS": {
+      "precision": 0.9508547008547008,
+      "recall": 0.9447983014861996,
+      "f1": 0.9478168264110756,
+      "support": 471
+    },
+    "WALKING_DOWNSTAIRS": {
+      "precision": 0.89171974522293,
+      "recall": 1.0,
+      "f1": 0.9427609427609428,
+      "support": 420
+    },
+    "SITTING": {
+      "precision": 0.793168880455408,
+      "recall": 0.8513238289205702,
+      "f1": 0.8212180746561886,
+      "support": 491
+    },
+    "STANDING": {
+      "precision": 0.8585858585858586,
+      "recall": 0.7988721804511278,
+      "f1": 0.8276533592989289,
+      "support": 532
+    },
+    "LAYING": {
+      "precision": 1.0,
+      "recall": 0.9739292364990689,
+      "f1": 0.9867924528301887,
+      "support": 537
+    }
+  },
+  "confusion_matrix": [
+    [
+      463,
+      8,
+      25,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      445,
+      26,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      420,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      418,
+      70,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      107,
+      425,
+      0
+    ],
+    [
+      0,
+      12,
+      0,
+      2,
+      0,
+      523
+    ]
+  ],
+  "classes": [
+    "WALKING",
+    "WALKING_UPSTAIRS",
+    "WALKING_DOWNSTAIRS",
+    "SITTING",
+    "STANDING",
+    "LAYING"
+  ],
+  "val": {
+    "accuracy": 0.9622641509433962,
+    "macro_f1": 0.9644494150389827,
+    "macro_precision": 0.9642593923925028,
+    "macro_recall": 0.9649691748642274,
+    "weighted_f1": 0.9622685728916728,
+    "balanced_accuracy": 0.9649691748642274,
+    "cohen_kappa": 0.9546179423034294,
+    "mcc": 0.9546983732465208,
+    "log_loss": 0.09979557718727998,
+    "roc_auc_macro_ovr": 0.996945460928063,
+    "top2_accuracy": 1.0,
+    "sit_stand_confusion_rate": 0.1016260162601626,
+    "walking_variants_confusion_rate": 0.001594896331738437,
+    "static_dynamic_confusion_rate": 0.000725689404934688
+  },
+  "train": {
+    "accuracy": 0.954804151322397,
+    "macro_f1": 0.9584506627168367,
+    "macro_precision": 0.960174639722939,
+    "macro_recall": 0.9590217243909259,
+    "weighted_f1": 0.9547188936136456,
+    "balanced_accuracy": 0.9590217243909259,
+    "cohen_kappa": 0.9456009968799947,
+    "mcc": 0.9461869714031486,
+    "log_loss": 0.11138134409685828,
+    "roc_auc_macro_ovr": 0.9954712670094139,
+    "top2_accuracy": 1.0,
+    "sit_stand_confusion_rate": 0.12407749077490775,
+    "walking_variants_confusion_rate": 0.0,
+    "static_dynamic_confusion_rate": 0.0
+  },
+  "efficiency": {
+    "params_total": 204678,
+    "params_trainable": 204678,
+    "model_size_mb": 0.787,
+    "flops_per_window": 51281568,
+    "flops_tool": "analytic GEMM count from weight shapes, 2 x MACs (torch flop_counter cannot trace the fused ATen LSTM kernels)",
+    "latency_ms_cpu_b1": 9.551,
+    "latency_ms_cpu_b1_p95": 16.767,
+    "cpu_threads": 8,
+    "throughput_cpu_wps": 1006.2,
+    "latency_ms_gpu_b1": null,
+    "throughput_gpu_wps": null,
+    "peak_gpu_mem_mb": null
+  },
+  "training": {
+    "train_time_s": 1264.42,
+    "epochs_trained": 29,
+    "best_epoch": 9,
+    "time_per_epoch_s": 43.598,
+    "best_val_macro_f1": 0.9644494150389827,
+    "early_stopping": "patience 20 on val macro-F1",
+    "peak_gpu_mem_mb": null
+  },
+  "hyperparameters": {
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "optimizer": "AdamW",
+    "epochs": 150,
+    "early_stopping_patience": 20,
+    "grad_clip": 1.0,
+    "augmentation": false,
+    "class_weights": false,
+    "lr_schedule": null,
+    "hidden": 78,
+    "n_layers": 2,
+    "dropout": 0.5,
+    "pooling": "mean_max"
+  },
+  "artifacts": {
+    "state_dict": "C:\\Users\\NANDAN~1\\AppData\\Local\\Temp\\opencode\\DL Proj\\models\\rnn\\baseline\\bilstm\\bilstm_state_dict.pt",
+    "config": "C:\\Users\\NANDAN~1\\AppData\\Local\\Temp\\opencode\\DL Proj\\models\\rnn\\baseline\\bilstm\\model_config.json",
+    "torchscript": "C:\\Users\\NANDAN~1\\AppData\\Local\\Temp\\opencode\\DL Proj\\models\\rnn\\baseline\\bilstm\\bilstm_deploy.torchscript.pt"
+  },
+  "notes": "bilstm: 2x LSTM(hidden=78, dropout=0.5); shared baseline protocol (no augmentation, no class weights, constant LR, early stop on val macro-F1); trained on CPU only (Intel64 Family 6 Model 140 Stepping 1, GenuineIntel) - latency/throughput are not comparable with the Colab Tesla T4 runs of the CNN and Transformer"
+}
