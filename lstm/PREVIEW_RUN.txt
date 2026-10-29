@@ -1,0 +1,3 @@
+PREVIEW RUN ONLY - NOT FINAL RESULTS
+Reduced CPU run: 12 epochs, patience 4, reduced grids and ablations.
+For final results, set HAR_PREVIEW=0 (or PREVIEW=False) and run on a T4 GPU.

@@ -1,0 +1,15 @@
+{
+  "model": "HAR_CNN",
+  "input_shape": [
+    9,
+    128
+  ],
+  "num_classes": 6,
+  "seed": 42,
+  "best_epoch": 17,
+  "best_validation_macro_f1": 0.9769643889944643,
+  "optimizer": "AdamW",
+  "lr": 0.0005,
+  "batch_size": 64,
+  "weight_decay": 0.0001
+}
