@@ -1,0 +1,28 @@
+{
+  "selected_run": "A_biT_h128_L1",
+  "config": {
+    "hidden_size": 128,
+    "num_layers": 1,
+    "dropout": 0.3,
+    "bidirectional": true,
+    "pooling": "last",
+    "optimizer": "adamw",
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "schedule": "cosine",
+    "warmup_epochs": 2,
+    "min_lr": 0.0001,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.05,
+    "ema": true,
+    "ema_decay": 0.998,
+    "augmented": true,
+    "batch_size": 64,
+    "epochs": 12,
+    "patience": 4,
+    "seed": 42
+  },
+  "preview": true,
+  "val_macro_f1": 0.9552522979976786,
+  "val_acc": 0.9528301886792453
+}

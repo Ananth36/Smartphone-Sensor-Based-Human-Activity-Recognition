@@ -1,7 +1,32 @@
+# ---------- Data (large; rebuilt by 01_HAR_Preprocessing.ipynb) ----------
+Dataset/
 dataset/
-processed/
-*.npz
-*.joblib
-.ipynb_checkpoints/
-.DS_Store
+*.zip
+
+# processed/: ignore the big arrays, keep the small json files
+# (meta.json carries dataset_version; scaler + feature-name files are tiny)
+processed/*.npz
+processed/*.joblib
+processed/*.pkl
+
+# ---------- Training by-products ----------
+# per-run grid-search folders (every result is already in grid_search_results.csv)
+**/runs/
+**/_quick_test/
+**/checkpoints/
+
+# ---------- Python / Jupyter ----------
 __pycache__/
+**/__pycache__/
+*.pyc
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# ---------- OS / Google Drive clutter ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.gdoc
+*.gsheet
+*.gslides
+*.gnote
