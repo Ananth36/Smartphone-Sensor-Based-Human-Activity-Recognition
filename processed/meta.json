@@ -1,0 +1,116 @@
+{
+  "dataset_version": "uci-har-1683f8492733",
+  "created": "2026-10-28 15:51:42",
+  "source": "UCI HAR Dataset (UCI ML Repository id 240, CC BY 4.0), Anguita et al. 2013",
+  "class_names": [
+    "WALKING",
+    "WALKING_UPSTAIRS",
+    "WALKING_DOWNSTAIRS",
+    "SITTING",
+    "STANDING",
+    "LAYING"
+  ],
+  "label_encoding": "original label k (1..6) -> class index k-1",
+  "channel_names": [
+    "body_acc_x",
+    "body_acc_y",
+    "body_acc_z",
+    "body_gyro_x",
+    "body_gyro_y",
+    "body_gyro_z",
+    "total_acc_x",
+    "total_acc_y",
+    "total_acc_z"
+  ],
+  "sequence_shape": "(N, 128, 9) = (windows, timesteps @ 50 Hz, channels) - channels last",
+  "tabular_shape": "(N, 561)",
+  "split": {
+    "protocol": "subject-independent; test = official UCI test subjects; val = 4 whole training subjects (most class-balanced StratifiedGroupKFold(5) fold, fixed to the team protocol)",
+    "train_subjects": [
+      1,
+      5,
+      7,
+      8,
+      11,
+      14,
+      15,
+      16,
+      19,
+      21,
+      22,
+      23,
+      25,
+      26,
+      27,
+      28,
+      30
+    ],
+    "val_subjects": [
+      3,
+      6,
+      17,
+      29
+    ],
+    "test_subjects": [
+      2,
+      4,
+      9,
+      10,
+      12,
+      13,
+      18,
+      20,
+      24
+    ]
+  },
+  "counts": {
+    "train": 5974,
+    "val": 1378,
+    "test": 2947,
+    "train_augmented": 11948
+  },
+  "class_counts": {
+    "train": [
+      997,
+      866,
+      795,
+      1055,
+      1113,
+      1148
+    ],
+    "val": [
+      229,
+      207,
+      191,
+      231,
+      261,
+      259
+    ],
+    "test": [
+      496,
+      471,
+      420,
+      491,
+      532,
+      537
+    ]
+  },
+  "values_clipped": {
+    "train": 1377,
+    "val": 292,
+    "test": 391
+  },
+  "non_finite_repaired": {
+    "features_train": 0,
+    "signals_train": 0,
+    "features_test": 0,
+    "signals_test": 0
+  },
+  "duplicate_windows": {
+    "train": 0,
+    "test": 0
+  },
+  "cross_split_duplicates": 0,
+  "constant_features": 0,
+  "seed": 42
+}

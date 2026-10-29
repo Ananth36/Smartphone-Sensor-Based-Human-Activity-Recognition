@@ -1,0 +1,3 @@
+model,run_tag,optimizer,learning_rate,batch_size,weight_decay,best_epoch,best_val_accuracy,best_val_macro_f1,test_accuracy,test_macro_f1
+CNN baseline,baseline,Adam,0.001,128,0.0,15,0.9709724238026124,0.9728925619834712,0.9379029521547336,0.939068065378068
+CNN tuned,tuned,AdamW,0.0005,64,0.0001,17,0.9753265602322206,0.9769643889944644,0.9511367492365116,0.9524824235165212

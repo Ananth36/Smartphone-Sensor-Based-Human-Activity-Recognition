@@ -1,0 +1,31 @@
+{
+  "selected_run": "B_lr0.0005_do0.1_augfull",
+  "config": {
+    "stem": "conv",
+    "patch": 2,
+    "d_model": 64,
+    "n_layers": 2,
+    "head_dim": 16,
+    "ff_mult": 2,
+    "dropout": 0.1,
+    "attn_dropout": 0.1,
+    "drop_path": 0.1,
+    "pool": "cls",
+    "optimizer": "adamw",
+    "lr": 0.0005,
+    "weight_decay": 0.05,
+    "schedule": "cosine",
+    "warmup_epochs": 10,
+    "min_lr": 1e-06,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.1,
+    "ema": true,
+    "ema_decay": 0.998,
+    "aug": "full",
+    "batch_size": 64,
+    "epochs": 200,
+    "patience": 30,
+    "seed": 42
+  },
+  "val_macro_f1": 0.9822676159425111
+}

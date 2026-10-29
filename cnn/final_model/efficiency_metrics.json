@@ -1,0 +1,9 @@
+{
+  "parameters": 38278,
+  "model_size_mb": 0.15557861328125,
+  "flops": "3401216.0",
+  "cpu_latency": "1.8387282499998037",
+  "cpu_throughput": "105238.02020123528",
+  "hardware": "GPU: Tesla T4; CPU: x86_64",
+  "framework": "PyTorch 2.11.0+cu130"
+}
