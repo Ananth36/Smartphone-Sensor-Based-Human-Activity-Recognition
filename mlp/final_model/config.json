@@ -1,0 +1,18 @@
+{
+  "hidden": [
+    128,
+    64
+  ],
+  "dropout": 0.2,
+  "lr": 0.001,
+  "wd": 0.01,
+  "bs": 64,
+  "sched": "none",
+  "seed": 42,
+  "max_epochs": 200,
+  "patience": 20,
+  "optimizer": "AdamW",
+  "loss": "cross_entropy",
+  "input": "tabular_561",
+  "dataset_version": "uci-har-1683f8492733"
+}
